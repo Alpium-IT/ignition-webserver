@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ignition-server
+
+resources:
+- namespace.yaml
+- deployment.yaml
+- service.yaml
+- route.yaml
+# - configmap-static.yaml
+
+configMapGenerator:
+  - name: files
+    files:
+      #  demo ignition files
+      - ignition-files/demo-worker.ign
+      - ignition-files/demo-worker99.ign
+      #  my actual ignition files
+      - ignition-files/worker.ign
+      - ignition-files/worker-bm0.ign
+      - ignition-files/worker-bm1.ign
+
+generatorOptions:
+  disableNameSuffixHash: true

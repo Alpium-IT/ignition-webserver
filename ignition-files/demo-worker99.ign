@@ -1,0 +1,32 @@
+{
+    "ignition": {
+        "config": {
+            "merge": [
+                {
+                    "source": "https://api-int.example.org:22623/config/worker"
+                }
+            ]
+        },
+        "security": {
+            "tls": {
+                "certificateAuthorities": [
+                    {
+                        "source": "data:text/plain;charset=utf-8;base64,LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lJWGc3OEhRTnNCS013RFFZSktvWklodmNOQVFFTEJRQXdKakVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1SQXdEZ1lEVlFRREV3ZHliMjkwTFdOaE1CNFhEVEkwTURFek1URTRNalV3T0ZvWApEVE0wTURFeU9ERTRNalV3T0Zvd0pqRVNNQkFHQTFVRUN4TUpiM0JsYm5Ob2FXWjBNUkF3RGdZRFZRUURFd2R5CmIyOTBMV05oTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF6YlVHbFFoNThRSG0KK1dmcjBWM2liR0NnMklYejliQmxDSU9nVUhqbHVFUC9IUTFkTmNkZDdwQ1NmanRNU3JXMDdNdFc3cFd6aVBjVwpCNVJyYm1PVlp3QWhVOVVCYnVPS001U0RYeWdvRjhPbnFtcTNObzR0Ymc2MFJhVmdDbExCRUNzbEkxV20zVVZxCnZCTXU3eDF5Wlc4NktyM01vNjgrUWpIc2xFSjhpR1dhWmhUY1FDUFJsdTg1VnJ2eWQ3dFVSalpaaTJDa3BXYUkKZWluOFZpY3licFdFbUEzcFVnNVhOTzBrSFRFMU9JUVhRRnBmTHhTcDAydHpycnBlU0N0THFWV3JjYTQ2bDRqdgovQnZKTmlpUVErK2k2LzlrZ1ptZ2NlRU5aK3ZiR1NTckdxWUpSS1RtOVdHaDhhWS8xeW1UaGEya1NXUDR1dW5uClpNOUd4Zmo0d1FJREFRQUJvMEl3UURBT0JnTlZIUThCQWY4RUJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIKL3pBZEJnTlZIUTRFRmdRVVk3RWFvaWJ4TzZoT0RKNWhrMmp5dm1oaDZjY3dEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQUErRGswaWltelZkKytGRytzYzFwUWZmQWxWS3pYRER5Y1hTYzlGeENqKzNUdll2YmswVzNxbmJmYWRGCmx0Z21JUzlrTCtIMkJEaGxHeElGZGdoV0FyaEFZeFh5enBwN1FGemlsZkJWa0VYV0Rkbkh0dlpoVW5XSEFQcGQKSGhCVW9IeUpIMDhPS3R3SEFBWDNmTEtsOUQ4NVpQY1RBTVBHbGtSZmRVbWxhQm9IMHhyb3ZoQmJkNGdzcDBTbQpzOXNKY0VXRDdOZ1N1dmhKR0V4UGVjcWt2RFRCampTRTF5TVUzVXNGVWVnMnBmWU9FMU1IMFAyc3NJK2F4eENBClNIc3J0NzhBQ3pvODVCMW5qS3BLMkdHNHZKU3JGM04yQS9abjR6QUNZZGJpY1dpcmFyWGQvQk5vbnNLSGtwQlAKNlkyRFdrZ3VwS0V2d1NpNm1QWXVva0VXSWEwPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+                    }
+                ]
+            }
+        },
+        "version": "3.2.0"
+    },
+    "storage": {
+        "files": [
+            {
+                "path": "/etc/hostname",
+                "contents": {
+                    "source": "data:text/plain,worker99.compute.local"
+                },
+                "mode": 420
+            }
+        ]
+    }
+}

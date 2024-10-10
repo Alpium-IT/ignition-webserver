@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ignition-server
+  name: ignition-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ignition-server
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ignition-server
+    spec:
+      containers:
+      - image: ghcr.io/nginxinc/nginx-unprivileged:1-alpine-slim
+        imagePullPolicy: Always
+        name: nginx-unprivileged
+        resources: {}
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: content
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: files
+        name: content
+
